@@ -1,3 +1,31 @@
+input[type=text] {
+	padding:10px;
+	border:0;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	width: 50%;
+	margin: 10px;
+}
+input[type=email] {
+	padding:10px;
+	border:0;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	width: 50%;
+	margin: 10px;
+}
+input[type=number] {
+	padding:10px;
+	border:0;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	width: 25%;
+	margin: 10px;
+}
+input[type=password] {
+	padding:10px;
+	border:0;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	width: 50%;
+	margin: 10px;
+}
 body {
 	font-size: 18px;
 }
@@ -177,7 +205,8 @@ div.section {
 .form {
 	border: 1px dotted black;
 	padding: 15px;
-	width: 500px;
+	width: 50%;
+	border-radius: 20px;
 }
 
 .flex {
@@ -186,11 +215,15 @@ div.section {
 }
 
 label {
-	padding: 5px 0 0 10px;
+	padding: 20px;
+	margin: 10px;
+	
+
 }
 
 .fourthName {
 	color: grey;
+	
 }
 
 .error-message {
@@ -199,5 +232,14 @@ label {
 }
 
 .form__submit {
-	margin-top: 15px;
+	margin: 30px;
+	padding: 15px;
+	border-radius: 20px;
+	color: #f9f5ef;
+	background-color: #33c3f0;
+
+}
+.form__select{
+	padding: 30px;
+	margin: 20px;
 }
