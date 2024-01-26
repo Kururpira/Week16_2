@@ -193,7 +193,7 @@ label {
 	color: red;
 	display: none;
 }
-.error-message{
+#error-message{
 	color: red;
-	display: none;
+	
 }
