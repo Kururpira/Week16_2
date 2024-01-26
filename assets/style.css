@@ -3,32 +3,34 @@ input[type=text] {
 	padding:10px;
 	border:0;
 	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-	width: 50%;
+	width: 60%;
 	margin: 10px;
 }
 input[type=email] {
 	padding:10px;
 	border:0;
 	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-	width: 50%;
+	width: 60%;
 	margin: 10px;
 }
 input[type=number] {
 	padding:10px;
 	border:0;
 	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-	width: 25%;
+	width: 35%;
 	margin: 10px;
 }
 input[type=password] {
 	padding:10px;
 	border:0;
 	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-	width: 50%;
+	width: 60%;
 	margin: 10px;
 }
 body {
 	font-size: 18px;
+	display: flex;
+	justify-content: center;
 }
 
 h1 {
@@ -91,6 +93,7 @@ ul,
 ol,
 form {
 	margin-bottom: 1.5rem;
+	
 }
 
 .cd {
@@ -144,15 +147,16 @@ div.section {
 
 .formsAll {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	
 }
 
 .form {
 	border: 1px dotted black;
 	padding: 15px;
-	width: 50%;
+	width: 100%;
 	border-radius: 20px;
+
 }
 
 .flex {
