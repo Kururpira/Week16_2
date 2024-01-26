@@ -11,34 +11,36 @@
 
 	<body>
 		<div class="container">
-			<h2><a>Практикум</a></h2>
 
-			<section class="formsAll">
+			
 				<div class="form">
 					<h2>Форма регистрации</h2>
-					<form name="formOne" class="firstForm">
+					<form name="form" class="firstForm">
 						<label for="firstName" class="form__label">Имя:</label>
-						<input type="text" id="firstName" name="firstName" class="form__input" placeholder="Введите Имя" minlength="2" maxlength="20" required />*
+						<input type="text" id="username" name="username" class="form__input" placeholder="Введите Имя" minlength="2" maxlength="20" required />*
+						<span class="error" id="usernameError"></span>
 						<br />
 
 						<label for="firstEmail" class="form__label">Email:</label>
-						<input type="email" id="firstName" name="firstEmail" class="form__input" placeholder="Введите адрес электронной почты" required />*
+						<input type="email" id="email" name="email" class="form__input" placeholder="Введите адрес электронной почты" required />*
+						<span class="error" id="emailError"></span>
 						<br />
 
 						<label for="firstEmail" class="form__label">Возраст:</label>
-						<input type="number" id="firstName" name="firstEmail" class="form__input" placeholder="Укажите возраст" required >*
+						<input type="number" id="firstName" name="firstName" class="form__input" placeholder="Укажите возраст" required >*
 						<br />
 
 						<label for="firstEmail" class="form__label">Укажите пол</label>
-						<input id="yes" type="radio" name="question">
+						<input id="yes" type="radio" name="firstName">
 						<label for="Муж">Мужской</label>
 					
-						<input id="no" type="radio" name="question">
+						<input id="no" type="radio" name="firstName">
 						<label for="Жен">Женский</label>
+						<span id='error-message'></span>
 						<br />
 
 						<label for="firstSelect" required class="form__label" >Выберите профессию:</label>
-						<select id="firstSelect" name="firstSelect" class="form__select" required  >*
+						<select id="firstSelect" name="firstName" class="form__select" required  >*
 							<option value="Опция 1">Врач</option>
 							<option value="Опция 2">Программист</option>
 							<option value="Опция 3">Учитель</option>
@@ -49,14 +51,18 @@
 						</select>
 						<br />
 						<label for="pass">Пароль:</label>
-                        <input type="password" id="firstName" name="password" minlength="8" required placeholder="Введите пароль" pattern="[0-9A-Za-zА-Яа-яЁё]{8,}"/>*
+                        <input type="password" class="form__input" id="firstName" name="firstName" minlength="8" required placeholder="Введите пароль" pattern="[0-9A-Za-zА-Яа-яЁё]{8,}"/>*
+						<span class="error" id="passwordError"></span>
 						<br />
-						<button type="submit" name="firstButton" class="form__submit">Отправить</button>
+						<input type="checkbox" name="agreeTerms" id="agreeTerms">
+                        <label for="agreeTerms">Я согласен с условиями</label>
+                        <span class="error" id="termsError"></span>
+                        <br />
+						<button type="submit" name="submitBtn" id="submitBtn" class="form__submit">Отправить</button>
 						<p class="error-message" id="errorMessage"></p>
 					</form>
 				</div>
 
-				</section>
 		</div>
 
 		<script src="./week16.js"></script>
