@@ -154,9 +154,9 @@ div.section {
 }
 
 .form {
-	border: 1px dotted black;
+	border: 2px dotted black;
 	padding: 15px;
-	width: 100%;
+	width: 120%;
 	border-radius: 20px;
 
 }

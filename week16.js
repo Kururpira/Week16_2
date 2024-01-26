@@ -7,12 +7,19 @@ const age = form.elements.age;
 const yes = form.elements.yes;
 const no = form.elements.no;
 const firstSelect = form.elements.firstSelect;
+const password = form.elements.password;
+const checkbox1 = form.elements.checkbox1;
+const checkbox2 = form.elements.checkbox2;
+
+const options = document.getElementById("options");
+
 
 
 const userNameError = document.getElementById('usernameError');
 const emailError = document.getElementById('emailError');
 const termsError = document.getElementById('termsError');
 const passwordError = document.getElementById('passwordError');
+
 
 form.addEventListener('submit', function(evt) {
 evt.preventDefault();
@@ -21,24 +28,25 @@ const firstName = form.elements.username.value;
 const email = form.elements.email.value;
 const age = form.elements.age.value;
 const firstSelectValue = form.elements.firstSelect.value;
-const yesValue = form.elements.yes.value;
-const noValue = form.elements.no.value;
+const passwordValue = form.elements.password.value;
+const optionsValue = form.elements["option"].value;
+
+
 
 console.log('Имя:', firstName);
 console.log('Email:', email);
-if (yesValue == true){
-	console.log('Пол: женский');
-}
-else{
-	console.log('Пол: мужской');
-}
 console.log('Возраст:', age);
+console.log('Пол:', optionsValue);
 console.log('Профессия:', firstSelectValue);
+console.log('Пароль:', passwordValue);
+
+
 
   // Очистка предыдущих сообщений об ошибках
 userNameError.style.display = 'none';
 emailError.style.display = 'none';
 termsError.style.display = 'none';
+passwordError.style.display = 'none';
 
 if (userNameInput.value === '') {
     userNameError.textContent = 'Введите имя пользователя.';
@@ -51,6 +59,7 @@ if (validateEmail(emailInput.value) === false) {
     emailError.style.display = 'block';
     hasError = true;
 }
+
 
 if (agreeTermsCheckbox.checked === false) {
     termsError.textContent = 'Необходимо согласие с условиями.';
@@ -67,9 +76,11 @@ function validateEmail(email) {
 let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 return regex.test(email);
 }
+
+
 document.forms.form.addEventListener('submit', function(evt) {
-    const checkbox1 = document.getElementById('yes').checked;
-    const checkbox2 = document.getElementById('no').checked;
+    const checkbox1 = document.getElementById('option1').checked;
+    const checkbox2 = document.getElementById('option2').checked;
     const errorMessage = document.getElementById('error-message');
 
     if (!checkbox1 && !checkbox2) {

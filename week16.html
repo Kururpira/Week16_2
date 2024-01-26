@@ -30,30 +30,27 @@
 						<input type="number" id="age" name="firstName" class="form__input" placeholder="Укажите возраст" required >*
 						<span id='ageError'></span>
 						<br />
-
-						<label for="firstEmail" class="form__label">Укажите пол</label>
-						<input id="yes" type="radio" name="firstName">
-						<label for="Муж">Мужской</label>
-					
-						<input id="no" type="radio" name="firstName">
-						<label for="Жен">Женский</label>
+						<div id="options">
+						<label for="firstEmail" class="form__label">Укажите пол:</label>
+						<input type="radio" id="option1" name="option" value="Мужской"> Мужской
+						<input type="radio" id="option2" name="option" value="Женский"> Женский
 						<br />
 						<span id='error-message'></span>
 						<br />
-
+						</div>
 						<label for="firstSelect" required class="form__label" >Выберите профессию:</label>
 						<select id="firstSelect" name="firstName" class="form__select" required  >*
-							<option value="Опция 1">Врач</option>
-							<option value="Опция 2">Программист</option>
-							<option value="Опция 3">Учитель</option>
-							<option value="Опция 3">Дизайнер</option>
-							<option value="Опция 3">Инженер</option>
-							<option value="Опция 3">Продавец</option>
-							<option value="Опция 3">Другое</option>
+							<option value="Врач">Врач</option>
+							<option value="Программист">Программист</option>
+							<option value="Учитель">Учитель</option>
+							<option value="Дизайнер">Дизайнер</option>
+							<option value="Инженер">Инженер</option>
+							<option value="Продавец">Продавец</option>
+							<option value="Другое">Другое</option>
 						</select>
 						<br />
 						<label for="pass">Пароль:</label>
-                        <input type="password" class="form__input" id="firstName" name="firstName" minlength="8" required placeholder="Введите пароль" pattern="[0-9A-Za-zА-Яа-яЁё]{8,}"/>*
+                        <input type="password" class="password" id="password" name="firstName" minlength="8" required placeholder="Введите пароль" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,20}$/">*
 						<span class="error" id="passwordError"></span>
 						<br />
 						<input type="checkbox" name="agreeTerms" id="agreeTerms">
