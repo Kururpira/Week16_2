@@ -3,6 +3,11 @@ const form = document.forms.form;
 const userNameInput = form.elements.username;
 const emailInput = form.elements.email;
 const agreeTermsCheckbox = form.elements.agreeTerms;
+const age = form.elements.age;
+const yes = form.elements.yes;
+const no = form.elements.no;
+const firstSelect = form.elements.firstSelect;
+
 
 const userNameError = document.getElementById('usernameError');
 const emailError = document.getElementById('emailError');
@@ -12,6 +17,23 @@ const passwordError = document.getElementById('passwordError');
 form.addEventListener('submit', function(evt) {
 evt.preventDefault();
 let hasError = false;
+const firstName = form.elements.username.value;
+const email = form.elements.email.value;
+const age = form.elements.age.value;
+const firstSelectValue = form.elements.firstSelect.value;
+const yesValue = form.elements.yes.value;
+const noValue = form.elements.no.value;
+
+console.log('Имя:', firstName);
+console.log('Email:', email);
+if (yesValue == true){
+	console.log('Пол: женский');
+}
+else{
+	console.log('Пол: мужской');
+}
+console.log('Возраст:', age);
+console.log('Профессия:', firstSelectValue);
 
   // Очистка предыдущих сообщений об ошибках
 userNameError.style.display = 'none';
