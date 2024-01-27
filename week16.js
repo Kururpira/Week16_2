@@ -7,7 +7,7 @@ const age = form.elements.age;
 const yes = form.elements.yes;
 const no = form.elements.no;
 const firstSelect = form.elements.firstSelect;
-const password = form.elements.password;
+const passwordInput = form.querySelector('.password');
 const checkbox1 = form.elements.checkbox1;
 const checkbox2 = form.elements.checkbox2;
 
@@ -30,7 +30,7 @@ const age = form.elements.age.value;
 const firstSelectValue = form.elements.firstSelect.value;
 const passwordValue = form.elements.password.value;
 const optionsValue = form.elements["option"].value;
-
+const password = passwordInput.value;
 
 
 console.log('Имя:', firstName);
@@ -59,7 +59,11 @@ if (validateEmail(emailInput.value) === false) {
     emailError.style.display = 'block';
     hasError = true;
 }
-
+if (!isValidPassword(password)) {
+    passwordError.textContent = 'Введите корректный пароль';
+    passwordError.style.display = 'block';
+    hasError = true;
+}
 
 if (agreeTermsCheckbox.checked === false) {
     termsError.textContent = 'Необходимо согласие с условиями.';
@@ -70,13 +74,17 @@ if (agreeTermsCheckbox.checked === false) {
 if (hasError === false) {
     alert('Форма успешно отправлена!');
 }
+form.submit();
 });
 
 function validateEmail(email) {
 let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 return regex.test(email);
 }
-
+function isValidPassword(password) {
+    const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,20}$/;
+    return pattern.test(password);
+}
 
 document.forms.form.addEventListener('submit', function(evt) {
     const checkbox1 = document.getElementById('option1').checked;
