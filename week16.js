@@ -74,7 +74,7 @@ if (agreeTermsCheckbox.checked === false) {
 if (hasError === false) {
     alert('Форма успешно отправлена!');
 }
-form.submit();
+
 });
 
 function validateEmail(email) {
