@@ -12,6 +12,11 @@ const checkbox1 = form.elements.checkbox1;
 const checkbox2 = form.elements.checkbox2;
 
 const options = document.getElementById("options");
+document.getElementById('agreeTerms').addEventListener('change', function() {
+    let submitBtn = document.getElementById('submitBtn');
+    let agreeTermsCheckbox = document.getElementById('agreeTerms');
+    submitBtn.disabled = !agreeTermsCheckbox.checked;
+});
 
 
 
@@ -23,6 +28,7 @@ const passwordError = document.getElementById('passwordError');
 
 form.addEventListener('submit', function(evt) {
 evt.preventDefault();
+
 let hasError = false;
 const firstName = form.elements.username.value;
 const email = form.elements.email.value;
@@ -86,6 +92,7 @@ function isValidPassword(password) {
     return pattern.test(password);
 }
 
+
 document.forms.form.addEventListener('submit', function(evt) {
     const checkbox1 = document.getElementById('option1').checked;
     const checkbox2 = document.getElementById('option2').checked;
@@ -98,4 +105,5 @@ document.forms.form.addEventListener('submit', function(evt) {
     } else {
     errorMessage.textContent = '';
     }
+    form.reset()
 });
